@@ -16,6 +16,7 @@ COPY requirements.txt /app/
 RUN pip config set global.index-url $PIP_INDEX
 RUN python -m pip install --upgrade pip
 RUN python -m pip install -r requirements.txt
+RUN python -m pip install galore_torch
 
 # Copy the rest of the application into the image
 COPY . /app/
